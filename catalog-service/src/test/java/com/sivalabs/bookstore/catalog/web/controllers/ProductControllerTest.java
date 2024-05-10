@@ -61,6 +61,4 @@ class ProductControllerTest extends AbstractIT {
                 .body("title", is("Product Not Found"))
                 .body("detail", is("Product with code " + code + " not found"));
     }
-
-    // change content
 }
