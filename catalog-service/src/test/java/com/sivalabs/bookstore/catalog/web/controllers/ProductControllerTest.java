@@ -1,6 +1,5 @@
 package com.sivalabs.bookstore.catalog.web.controllers;
 
-
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasSize;
@@ -12,6 +11,7 @@ import io.restassured.http.ContentType;
 import java.math.BigDecimal;
 import org.junit.jupiter.api.Test;
 import org.springframework.test.context.jdbc.Sql;
+
 @Sql("/test-data.sql")
 class ProductControllerTest extends AbstractIT {
     @Test
@@ -61,5 +61,4 @@ class ProductControllerTest extends AbstractIT {
                 .body("title", is("Product Not Found"))
                 .body("detail", is("Product with code " + code + " not found"));
     }
-
 }
