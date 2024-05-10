@@ -1,12 +1,10 @@
 name: Catalog Service
-
 on:
   push:
     paths:
       - catalog-service/**
     branches:
       - '**'
-
 jobs:
   build:
     name: Build
@@ -25,7 +23,5 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
           cache: 'maven'
-
-
       - name: Build with Maven
         run: mvn -ntp verify
