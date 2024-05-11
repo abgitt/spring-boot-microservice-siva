@@ -1,4 +1,4 @@
-version: "3"
+name: 'spring-boot-microservices-course'
 services:
   catalog-db:
     image: postgres:16-alpine
